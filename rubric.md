@@ -24,9 +24,9 @@ _____ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attend
 
 **PART** 1 pt: Uses a canned response when no mirror words detected
 
-_____ 1 pt: Detects the requested set of mirror words (at minimum)
+**PART** 1 pt: Detects the requested set of mirror words (at minimum)
 
-_____ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
+**PART** 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
 
 ### Level 3 (3 pts)
 
