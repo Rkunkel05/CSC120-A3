@@ -30,7 +30,7 @@ _____ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attend
 
 ### Level 3 (3 pts)
 
-_____ 1 pt: Makes all appropriate mirror replacements
+**PART** 1 pt: Makes all appropriate mirror replacements
 
 _____ 1 pt: Stores transcript of the conversation in an array
 

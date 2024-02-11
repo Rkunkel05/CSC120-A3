@@ -14,19 +14,15 @@ class Conversation {
     Scanner userInput = new Scanner(System.in);
     // Generates a random number for the response
     int randomNum;
-                        // WORKING ON...
-                        // Check if pronouns in sentence
-                        // Mirror pronouns in response 
-                        // No pronouns? -> Canned response
-                        // Based on the number, selects a possibel response 
     // Conversation continues while the user's request for conversation rounds is > 0
     while (a>0) {
       // Convo refers to what the user inputs (their conversation)
-      String convo = userInput.nextLine();
+      String convo = userInput.nextLine().toLowerCase();
       // Chatbot string refers to what the chatBot is saying
       String chatBot = convo;
+      // Splits the chatBot string by white space so each word is isoalted
       String[] split_chatBot = convo.split("\\s+");
-      // Loops through each word in split_chatBot (basically what the chatbot replies with but split up)
+      // Establishes i as 0, and adds to i with each loop. Loops through so long as i is less than the length of split_chatBot.
       for (int i = 0; i < split_chatBot.length; i++) {
         boolean pronouns = false;
       // Checks to see what pronouns are in the sentence and replaces them with mirrored ones
@@ -51,45 +47,40 @@ class Conversation {
         else if (split_chatBot[i].equals("are")) {
           split_chatBot[i] = "am"; 
           pronouns = true;}
-      
+      if (pronouns) {
+        chatBot = String.join(" ", split_chatBot);
+        System.out.println(chatBot); }
         // If there are no pronouns, replies with a random canned response
         if (pronouns == false) {
           randomNum = (int) (Math.random() * 5) + 1;
           if (randomNum == 1) {
             System.out.println("Hm...");
+            break;
           }
           else if (randomNum == 2) {
             System.out.println("Cool!");
+            break;
           }
           else if (randomNum == 3) {
             System.out.println("Interesting!");
+            break;
           }
           else if (randomNum == 4) {
             System.out.println("Fascinating...");
+            break;
           }
           else if (randomNum == 4) {
             System.out.println("Huh!");
+            break;
           }  
         }
       }
-      // BUG: No mirror words? Prints out generic response AND users input...
-      chatBot = String.join(" ", split_chatBot);
-      System.out.println(chatBot);
       a = a- 1;
     }
     userInput.close();
     input.close();
     System.out.println("Thanks for chatting!");
     }
-   
-
-
-    // make a for loop that runs for (user input) amount of rounds
-    // for (x rounds) {
-      // conversation loop
-      // user inputs something
-      // chatbot replies w/ something else (depends on punctuation, pronouns, etc.)
-      // exits loop when # of rounds met
     } 
 
   
