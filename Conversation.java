@@ -58,6 +58,7 @@ class Conversation {
           System.out.println("Huh!");
         }  
       }
+      // BUG: No mirror words? Prints out generic response AND users input...
       System.out.println(chatBot);
       a = a- 1;
     }
