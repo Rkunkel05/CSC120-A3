@@ -22,7 +22,7 @@ _____ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attend
 
 ### Level 2 (3 pts)
 
-_____ 1 pt: Uses a canned response when no mirror words detected
+**PART** 1 pt: Uses a canned response when no mirror words detected
 
 _____ 1 pt: Detects the requested set of mirror words (at minimum)
 
