@@ -5,12 +5,14 @@ Use this file to record your reflection on this assignment.
 * Consulted https://www.javatpoint.com/java-tutorial
 * Consulted https://docs.oracle.com/javase/1.5.0/docs/api/overview-summary.html
 - Which session(s) of TA / office hours did you attend?
+* I went to office hours on Tuesday
 
 - What are your initial impressions of Java? 
 * Very similar to Python with the logic, but a little more complicated with doing basic things
 * A little clunky/awkward to figure out, but once you get over the inital curve of syntax, it becomes
 much easier
 * I don't know if it was just this assignment, but I'm still finding it a little tricky to work with so many variables that I feel like are always changing names...
+* I find keeping track of the curly brackets to be a little confusing ):
 
 - Can you draw any conclusion about programming in general from the similarities or the differences between the two languages? 
 * Problem solving is the same

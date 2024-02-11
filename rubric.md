@@ -22,11 +22,11 @@ _____ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attend
 
 ### Level 2 (3 pts)
 
-**PART** 1 pt: Uses a canned response when no mirror words detected
+**YES** 1 pt: Uses a canned response when no mirror words detected
 
-**PART** 1 pt: Detects the requested set of mirror words (at minimum)
+**YES** 1 pt: Detects the requested set of mirror words (at minimum)
 
-**PART** 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
+**YES** 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
 
 ### Level 3 (3 pts)
 
@@ -48,9 +48,9 @@ _____ (Kudos!) Handles you --> me/I dilemma
 
 ## General Items:
 
-_____ 4 pts: Programs compile without errors or warnings
+**YES** 4 pts: Programs compile without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+**YES** 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
 _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 

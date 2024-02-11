@@ -23,10 +23,11 @@ class Conversation {
       // Splits the chatBot string by white space so each word is isoalted
       String[] split_chatBot = convo.split("\\s+");
       // Establishes i as 0, and adds to i with each loop. Loops through so long as i is less than the length of split_chatBot.
+      
+      boolean pronouns = false;
       for (int i = 0; i < split_chatBot.length; i++) {
-        boolean pronouns = false;
       // Checks to see what pronouns are in the sentence and replaces them with mirrored ones
-        if (split_chatBot[i].equals("I")) { 
+        if (split_chatBot[i].equals("i")) { 
           split_chatBot[i] = "you";
           pronouns = true; }
         else if (split_chatBot[i].equals("me")) {
@@ -46,42 +47,40 @@ class Conversation {
           pronouns = true;}
         else if (split_chatBot[i].equals("are")) {
           split_chatBot[i] = "am"; 
-          pronouns = true;}
+          pronouns = true;} }
       if (pronouns) {
         chatBot = String.join(" ", split_chatBot);
-        System.out.println(chatBot); }
+        System.out.println(chatBot);
+        a = a-1;}
+
         // If there are no pronouns, replies with a random canned response
         if (pronouns == false) {
           randomNum = (int) (Math.random() * 5) + 1;
           if (randomNum == 1) {
             System.out.println("Hm...");
-            break;
           }
           else if (randomNum == 2) {
             System.out.println("Cool!");
-            break;
           }
           else if (randomNum == 3) {
             System.out.println("Interesting!");
-            break;
           }
           else if (randomNum == 4) {
             System.out.println("Fascinating...");
-            break;
           }
           else if (randomNum == 4) {
             System.out.println("Huh!");
-            break;
           }  
+        a = a- 1;
+        pronouns = false;
         }
       }
-      a = a- 1;
-    }
     userInput.close();
     input.close();
     System.out.println("Thanks for chatting!");
     }
-    } 
+
+    }
 
   
 
