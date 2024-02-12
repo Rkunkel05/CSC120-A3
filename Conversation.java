@@ -27,6 +27,7 @@ class Conversation {
       boolean pronouns = false;
       for (int i = 0; i < split_chatBot.length; i++) {
       // Checks to see what pronouns are in the sentence and replaces them with mirrored ones
+      // check if pronouns period are in it, then run this block here
         if (split_chatBot[i].equals("i")) { 
           split_chatBot[i] = "you";
           pronouns = true; }
@@ -52,7 +53,7 @@ class Conversation {
         chatBot = String.join(" ", split_chatBot);
         System.out.println(chatBot);
         a = a-1;}
-
+      // keep this in the for loops yahoo, if pronouns are NOT in it, run this bit 
         // If there are no pronouns, replies with a random canned response
         if (pronouns == false) {
           randomNum = (int) (Math.random() * 5) + 1;
