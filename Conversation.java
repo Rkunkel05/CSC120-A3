@@ -12,7 +12,7 @@ class Conversation {
     // Start conversation
     System.out.println("Hello! Welcome to the chatbot. What would you like to talk about?");
     Scanner userInput = new Scanner(System.in);
-    // Generates a random number for the response
+    // Initlizes a random int for the canned response
     int randomNum;
     // Conversation continues while the user's request for conversation rounds is > 0
     while (a>0) {
@@ -20,14 +20,13 @@ class Conversation {
       String convo = userInput.nextLine().toLowerCase();
       // Chatbot string refers to what the chatBot is saying
       String chatBot = convo;
-      // Splits the chatBot string by white space so each word is isoalted
+      // Splits the chatBot string by white space so each word is isoalted 
       String[] split_chatBot = convo.split("\\s+");
-      // Establishes i as 0, and adds to i with each loop. Loops through so long as i is less than the length of split_chatBot.
-      
       boolean pronouns = false;
-      for (int i = 0; i < split_chatBot.length; i++) {
+      // Establishes i as 0, and adds to i with each loop. Loops through so long as i is less than the length of split_chatBot.
+      for (int i = 0; i < split_chatBot.length; 
+           i=i+1) {
       // Checks to see what pronouns are in the sentence and replaces them with mirrored ones
-      // check if pronouns period are in it, then run this block here
         if (split_chatBot[i].equals("i")) { 
           split_chatBot[i] = "you";
           pronouns = true; }
@@ -52,28 +51,29 @@ class Conversation {
             split_chatBot[i] = "am"; 
             pronouns = true;} }
         }
+      // if pronouns is true, join together split_chatBot, keeping spaces, and prints it out. Decreases a by 1.
       if (pronouns) {
         chatBot = String.join(" ", split_chatBot);
         System.out.println(chatBot);
         a = a-1;}
-      // keep this in the for loops yahoo, if pronouns are NOT in it, run this bit 
         // If there are no pronouns, replies with a random canned response
-        if (pronouns == false) {
-          randomNum = (int) (Math.random() * 5) + 1;
-          if (randomNum == 1) {
-            System.out.println("Hm...");
+      if (pronouns == false) {
+        // Generates a random number 1-4
+        randomNum = (int) (Math.random() * 5) + 1;
+        if (randomNum == 1) {
+          System.out.println("Hm...");
           }
-          else if (randomNum == 2) {
-            System.out.println("Cool!");
+        else if (randomNum == 2) {
+          System.out.println("Cool!");
           }
-          else if (randomNum == 3) {
-            System.out.println("Interesting!");
+        else if (randomNum == 3) {
+          System.out.println("Interesting!");
           }
-          else if (randomNum == 4) {
-            System.out.println("Fascinating...");
+        else if (randomNum == 4) {
+          System.out.println("Fascinating...");
           }
-          else if (randomNum == 4) {
-            System.out.println("Huh!");
+        else if (randomNum == 4) {
+          System.out.println("Huh!");
           }  
         a = a- 1;
         pronouns = false;
@@ -82,6 +82,7 @@ class Conversation {
     userInput.close();
     input.close();
     System.out.println("Thanks for chatting!");
+    // Print transcript of convo
     }
     }
 
