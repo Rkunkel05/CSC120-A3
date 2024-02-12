@@ -43,12 +43,15 @@ class Conversation {
         else if (split_chatBot[i].equals("yours")) {
           split_chatBot[i] = "mine";
           pronouns = true; }
-        else if (split_chatBot[i].equals("am")) {
-          split_chatBot[i] = "are";
-          pronouns = true;}
-        else if (split_chatBot[i].equals("are")) {
-          split_chatBot[i] = "am"; 
-          pronouns = true;} }
+        // check to see if pronouns are in sentence, and if they are, changes am/are to correspond correctly
+        if (convo.contains("you") || convo.contains("i")); {
+          if (split_chatBot[i].equals("am")) {
+            split_chatBot[i] = "are";
+            pronouns = true;} 
+          else if (split_chatBot[i].equals("are")) {
+            split_chatBot[i] = "am"; 
+            pronouns = true;} }
+        }
       if (pronouns) {
         chatBot = String.join(" ", split_chatBot);
         System.out.println(chatBot);
@@ -80,7 +83,6 @@ class Conversation {
     input.close();
     System.out.println("Thanks for chatting!");
     }
-
     }
 
   
