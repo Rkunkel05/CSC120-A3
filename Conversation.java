@@ -11,17 +11,21 @@ class Conversation {
     // Get user input for number of rounds
     System.out.println("How many rounds of conversation do you want?: ");
     int a = input.nextInt();
+    // Makes a list to store the conversation in 
+    List<String> conversation = new ArrayList<>();
+    String intro;
     // Start conversation
-    System.out.println("Hello! Welcome to the chatbot. What would you like to talk about?");
+    intro = "Hello! Welcome to the chatbot. What would you like to talk about?";
+    conversation.add(intro);
+    System.out.println(intro);
     Scanner userInput = new Scanner(System.in);
     // Initlizes a random int for the canned response
     int randomNum;
-    // Makes a list to store the conversation in 
-    List<String> conversation = new ArrayList<>();
     // Conversation continues while the user's request for conversation rounds is > 0
     while (a>0) {
       // Convo refers to what the user inputs (their conversation)
       String convo = userInput.nextLine().toLowerCase();
+      conversation.add(convo);
       // Chatbot string refers to what the chatBot is saying
       String chatBot = convo;
       // Splits the chatBot string by white space so each word is isoalted 
@@ -97,7 +101,9 @@ class Conversation {
       }
     userInput.close();
     input.close();
-    System.out.println("Thanks for chatting!");
+    System.out.println("Thanks for chatting! \n");
+    System.out.println("Transcript:");
+    // for each item in the conversation, print it out on its own line (\n)
     System.out.println(conversation);
     }
     }

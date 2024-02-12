@@ -32,9 +32,9 @@ _____ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attend
 
 **YES** 1 pt: Makes all appropriate mirror replacements
 
-_____ 1 pt: Stores transcript of the conversation in an array
+**PART** 1 pt: Stores transcript of the conversation in an array
 
-_____ 1 pt: Prints transcript when terminating
+**PART** 1 pt: Prints transcript when terminating
 
 ## Kudos:
 
@@ -58,11 +58,11 @@ _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
       _____ Clear and consistent indentation of bracketed sections
 
-      _____ Adheres to Java conventions on naming & capitalization
+      **YES** Adheres to Java conventions on naming & capitalization
 
-      _____ Methods & variables all have clear and accurate names
+      **YES** Methods & variables all have clear and accurate names
 
-      _____ Methods avoid confusing side effects
+      **YES** Methods avoid confusing side effects
 
 **YES** 1 pt: All required files included with submission (including completed checklist file)
 
