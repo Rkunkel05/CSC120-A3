@@ -103,8 +103,11 @@ class Conversation {
     input.close();
     System.out.println("Thanks for chatting! \n");
     System.out.println("Transcript:");
-    // for each item in the conversation, print it out on its own line (\n)
-    System.out.println(conversation);
+    // won't print anything now...
+    for (String topic : conversation) {
+      // for each item in the conversation, print it out on its own line (\n)
+      System.out.println(topic);
+    }
     }
     }
 
