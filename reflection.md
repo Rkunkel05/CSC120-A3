@@ -1,7 +1,7 @@
 Use this file to record your reflection on this assignment.
 
 - Which classmates did you consult with while working on this assignment?
-I worked with Huda on this assignment, and also consulted https://www.javatpoint.com/java-tutorial
+I worked with Huda and Lucy on this assignment, and also consulted https://www.javatpoint.com/java-tutorial
 as well as https://docs.oracle.com/javase/1.5.0/docs/api/overview-summary.html.
 
 - Which session(s) of TA / office hours did you attend?
@@ -15,4 +15,3 @@ Python and Java are two relatively different languages. They use different synta
 
 - What worked, what didn't, what advice would you give someone taking this course in the future?
 In my code, I feel like I was able to accomplish most takes, but not in the most efficient manner. Much of my code looks clunky and there are definitely cleaner ways to write out my thoughts. This lack of organization sometimes made it difficult for me to keep track of variable names, curly brackets, and if my code was included in a loop or not. I feel that spending more time writing out my ideas might have helped with this, and I would suggest someone taking this course in the future to write out their ideas first before touching any code! Especially if you don't know where to start with code, it gets your brain thinking and can help launch you into the coding mindset. Also, it gives a good checklist of things to complete. On a similar note, I would also suggest not to be afraid of messing around and writing out rough ideas of code - even if the syntax isn't right and VSCode yells at you for it. 
-

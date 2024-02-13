@@ -1,25 +1,36 @@
+/* 
+   Filename: Conversation.java
+Description: Creates class Conversation that asks for how many rounds the chatbot will talk for. The chatbot
+checks for pronouns and mirrors them, or if there are no pronouns, replies with a canned response. Prints a 
+transcript of the conversation once the rounds are over
+     Author: Rachel Kunkel
+       Date: 13 February 2024  
+*/
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.lang.Math;
 
 class Conversation {
-
     public static void main(String[] arguments) {
-        // You will start the conversation here.
         Scanner input = new Scanner(System.in);
         // Get user input for number of rounds
         System.out.println("How many rounds of conversation do you want?: ");
         int a = input.nextInt();
         // Makes a list to store the conversation in 
         List < String > conversation = new ArrayList < > ();
-        String[] cannedResponses =  {
-          "Hm...", 
-          "Cool!", 
-          "Interesting!", 
-          "Fascinating!", 
-          "Huh"
-        };
+
+        // **Brainstorming** 
+          //list of canned responses 
+        // String[] cannedResponses =  {
+        //   "Hm...", 
+        //   "Cool!", 
+        //   "Interesting!", 
+        //   "Fascinating!", 
+        //   "Huh"
+        // };
+        
         String intro;
         // Start conversation
         intro = "Hello! Welcome to the chatbot. What would you like to talk about?";
@@ -30,12 +41,13 @@ class Conversation {
         int randomNum;
         // Conversation continues while the user's request for conversation rounds is > 0
         while (a > 0) {
-            // Convo refers to what the user inputs (their conversation)
+            // Convo refers to what the user inputs (their conversation) - made lowercase for convenience
             String convo = userInput.nextLine().toLowerCase();
+            // adds the chatbot's welcome to the transcript (conversation) list
             conversation.add(convo);
             // Chatbot string refers to what the chatBot is saying
             String chatBot = convo;
-            // Splits the chatBot string by white space so each word is isoalted 
+            // Splits the chatBot string by white space so each word is isoalted, split_Chatbot is the user's split input
             String[] split_chatBot = convo.split("\\s+");
             boolean pronouns = false;
             String response;
@@ -60,12 +72,12 @@ class Conversation {
                 }
                 // check to see if pronouns are in sentence, and if they are, changes am/are to correspond correctly
                 if (convo.contains("you") || convo.contains("i")); {
-                    if (split_chatBot[i].equals("am")) {
-                        split_chatBot[i] = "are";
-                        pronouns = true;
-                    } else if (split_chatBot[i].equals("are")) {
-                        split_chatBot[i] = "am";
-                        pronouns = true;
+                  if (split_chatBot[i].equals("am")) {
+                      split_chatBot[i] = "are";
+                      pronouns = true;
+                  } else if (split_chatBot[i].equals("are")) {
+                      split_chatBot[i] = "am";
+                      pronouns = true;
                     }
                 }
             }
@@ -74,15 +86,18 @@ class Conversation {
                 chatBot = String.join(" ", split_chatBot);
                 System.out.println(chatBot);
                 conversation.add(chatBot);
-                a = a - 1;
             }
             // If there are no pronouns, replies with a random canned response
             else {
                 // Generates a random number 1-5
                 randomNum = (int)(Math.random() * 5) + 1;
-                response = cannedResponses[randomNum];
-                System.out.println(response);
-                conversation.add(response);
+
+                // ** Brainstorming ** 
+                  // ideas on how to make the cannedResponses nicer
+                // response = cannedResponses[randomNum];
+                // System.out.println(response);
+                // conversation.add(response);
+
                 if (randomNum == 1) {
                     response = "Hm...";
                     System.out.println(response);
@@ -106,9 +121,9 @@ class Conversation {
                     conversation.add(response);
                 }
                 pronouns = false;
-                a = a - 1;
             }
-            System.out.println(""); // Resolved weird bug, no clue why it fixed it...
+            a = a - 1;
+            System.out.println(""); 
         }
         System.out.println("Thanks for chatting! \n");
         System.out.println("Transcript:");

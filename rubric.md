@@ -52,11 +52,11 @@ _____ (Kudos!) Handles you --> me/I dilemma
 
 **YES** 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
-_____ 2 pt: Complies with style guidelines (missing items 1 pt each):
+**YES** 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      _____ Classes & class members all have Javadoc header comments
+      **YES** Classes & class members all have Javadoc header comments
 
-      _____ Clear and consistent indentation of bracketed sections
+      **YES** Clear and consistent indentation of bracketed sections
 
       **YES** Adheres to Java conventions on naming & capitalization
 
