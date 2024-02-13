@@ -13,6 +13,13 @@ class Conversation {
         int a = input.nextInt();
         // Makes a list to store the conversation in 
         List < String > conversation = new ArrayList < > ();
+        String[] cannedResponses =  {
+          "Hm...", 
+          "Cool!", 
+          "Interesting!", 
+          "Fascinating!", 
+          "Huh"
+        };
         String intro;
         // Start conversation
         intro = "Hello! Welcome to the chatbot. What would you like to talk about?";
@@ -73,6 +80,9 @@ class Conversation {
             else {
                 // Generates a random number 1-5
                 randomNum = (int)(Math.random() * 5) + 1;
+                response = cannedResponses[randomNum];
+                System.out.println(response);
+                conversation.add(response);
                 if (randomNum == 1) {
                     response = "Hm...";
                     System.out.println(response);
@@ -98,7 +108,7 @@ class Conversation {
                 pronouns = false;
                 a = a - 1;
             }
-            System.out.println("");
+            System.out.println(""); // Resolved weird bug, no clue why it fixed it...
         }
         System.out.println("Thanks for chatting! \n");
         System.out.println("Transcript:");
