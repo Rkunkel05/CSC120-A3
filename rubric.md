@@ -32,9 +32,9 @@ _____ 1 pt: `reflection.md` lists the classmates you consulted & TA hours attend
 
 **YES** 1 pt: Makes all appropriate mirror replacements
 
-**PART** 1 pt: Stores transcript of the conversation in an array
+**YES** 1 pt: Stores transcript of the conversation in an array
 
-**PART** 1 pt: Prints transcript when terminating
+**YES** 1 pt: Prints transcript when terminating
 
 ## Kudos:
 

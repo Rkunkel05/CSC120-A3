@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.lang.Math;
 
-class Conversation {
+class test {
 
     public static void main(String[] arguments) {
         // You will start the conversation here.
@@ -98,7 +98,7 @@ class Conversation {
                 pronouns = false;
                 a = a - 1;
             }
-            System.out.println("");
+        System.out.println("");
         }
         System.out.println("Thanks for chatting! \n");
         System.out.println("Transcript:");
