@@ -21,16 +21,16 @@ class Conversation {
         // Makes a list to store the conversation in 
         List < String > conversation = new ArrayList < > ();
 
-        // **Brainstorming** 
-          //list of canned responses 
-        // String[] cannedResponses =  {
-        //   "Hm...", 
-        //   "Cool!", 
-        //   "Interesting!", 
-        //   "Fascinating!", 
-        //   "Huh"
-        // };
-        
+
+        //list of canned responses 
+        String[] cannedResponses =  {
+          "Hm...", 
+          "Cool!", 
+          "Interesting!", 
+          "Fascinating!", 
+          "Huh"
+        };
+
         String intro;
         // Start conversation
         intro = "Hello! Welcome to the chatbot. What would you like to talk about?";
@@ -90,37 +90,12 @@ class Conversation {
             // If there are no pronouns, replies with a random canned response
             else {
                 // Generates a random number 1-5
-                randomNum = (int)(Math.random() * 5) + 1;
-
-                // ** Brainstorming ** 
-                  // ideas on how to make the cannedResponses nicer
-                // response = cannedResponses[randomNum];
-                // System.out.println(response);
-                // conversation.add(response);
-
-                if (randomNum == 1) {
-                    response = "Hm...";
-                    System.out.println(response);
-                    conversation.add(response);
-                } else if (randomNum == 2) {
-                    response = "Cool!";
-                    System.out.println(response);
-                    conversation.add(response);
-
-                } else if (randomNum == 3) {
-                    response = "Interesting!";
-                    System.out.println(response);
-                    conversation.add(response);
-                } else if (randomNum == 4) {
-                    response = "Fascinating!";
-                    System.out.println(response);
-                    conversation.add(response);
-                } else if (randomNum == 5) {
-                    response = "Huh!";
-                    System.out.println(response);
-                    conversation.add(response);
-                }
-                pronouns = false;
+                randomNum = (int)(Math.random() * 4) + 1;
+                // selects a random number from the list cannedResponses and prints it
+                response = cannedResponses[randomNum];
+                System.out.println(response);
+                // adds the canned response to the transcript list
+                conversation.add(response);
             }
             a = a - 1;
             System.out.println(""); 
